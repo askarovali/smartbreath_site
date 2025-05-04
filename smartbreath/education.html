@@ -1,0 +1,104 @@
+<!-- education.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBreath - Образовательная платформа</title>
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Chart.js для графиков -->
+  <script src="libs/chartjs/chart.min.js" defer></script>
+  <script src="js/chart-init.js" defer></script>
+
+  <style>
+    .page-title { text-align: center; color: var(--color-1); margin: 2rem 0; }
+    .section { max-width: 800px; margin: 2rem auto; background: var(--color-4); padding: 1.5rem; border-radius: 8px; }
+    .section h2 { color: var(--color-1); margin-bottom: 1rem; }
+    .section form { display: flex; flex-direction: column; gap: 1rem; }
+    .section input, .section select { padding: 0.5rem; border: 1px solid var(--color-2); border-radius: 4px; }
+    .section button { width: fit-content; padding: 0.5rem 1rem; background: var(--color-2); color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    .dashboard { display: flex; flex-direction: column; gap: 2rem; }
+    .chart-container { position: relative; height: 300px; }
+    .instructions ul { list-style: disc; margin-left: 1.5rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">SmartBreath</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="map.html">Карта станций</a></li>
+        <li><a href="how-it-works.html">Как это работает</a></li>
+        <li><a href="education.html">Образовательная платформа</a></li>
+        <li><a href="pilot.html">Пилот и планы</a></li>
+        <li><a href="partners.html">Партнёры</a></li>
+        <li><a href="news.html">Блог</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="page-title">Образовательная платформа</h1>
+
+    <!-- Форма регистрации / входа -->
+    <section class="section">
+      <h2>Регистрация школы / эко-клуба</h2>
+      <form action="#" method="post">
+        <input type="text" name="school" placeholder="Название школы или клуба" required>
+        <input type="email" name="email" placeholder="Email ответственного" required>
+        <select name="station">
+          <option value="">Выберите станцию</option>
+          <option>Школа №1</option>
+          <option>Остановка А</option>
+          <option>Парк</option>
+        </select>
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </section>
+
+    <!-- Дашборд с графиком -->
+    <section class="section dashboard">
+      <h2>Дашборд мини-исследований</h2>
+      <div class="chart-container">
+        <canvas id="researchChart"></canvas>
+      </div>
+      <button onclick="saveReport()">Экспорт в PDF</button>
+    </section>
+
+    <!-- Инструкции для учащихся -->
+    <section class="section instructions">
+      <h2>Инструкции для экспериментов</h2>
+      <ul>
+        <li>Проверять уровень влажности и состояния растений ежедневно.</li>
+        <li>Снимать показания сенсоров в одно и то же время.</li>
+        <li>Заполнять табличку с данными за неделю.</li>
+        <li>Сравнивать результаты «до» и «после» установки панелей.</li>
+        <li>Готовить краткий отчёт с графиками и фотографиями.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 SmartBreath. Все права защищены.</p>
+  </footer>
+
+  <!-- Скрипт для построения графика и экспорта -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        initLineChart(
+          'researchChart',
+          ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'],
+          [45,42,40,38,35,33,32],
+          'rgba(135,163,48,0.8)',
+          { datasetLabel: 'PM2.5 (μg/m³)' }
+        );
+      });      
+
+    function saveReport() {
+      alert('Функция экспорта в PDF будет реализована позже');
+    }
+  </script>
+</body>
+</html>

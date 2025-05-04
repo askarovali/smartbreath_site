@@ -1,0 +1,113 @@
+<!-- how-it-works.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBreath - Как это работает</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js"></script>
+  <style>
+    .section {
+      background-color: var(--color-4);
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      border-radius: 8px;
+    }
+    .section h2 {
+      color: var(--color-1);
+      margin-bottom: 1rem;
+    }
+    .section p {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .section ul {
+      margin-left: 1.5rem;
+      list-style-type: disc;
+      margin-bottom: 1rem;
+    }
+    .section img {
+      display: block;
+      width: 100%;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+    .page-title {
+      text-align: center;
+      margin-top: 2rem;
+      color: var(--color-1);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">SmartBreath</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="map.html">Карта станций</a></li>
+        <li><a href="how-it-works.html">Как это работает</a></li>
+        <li><a href="education.html">Образовательная платформа</a></li>
+        <li><a href="pilot.html">Пилот и планы</a></li>
+        <li><a href="partners.html">Партнёры</a></li>
+        <li><a href="news.html">Блог</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="page-title">Как это работает</h1>
+
+    <section class="section">
+      <h2>1. Биофильтрационные панели</h2>
+      <p>Каждый модуль размером 1×1 м содержит:</p>
+      <ul>
+        <li><strong>Растения</strong> (мох, очиток, ползучие травы)</li>
+        <li><strong>Пористый субстрат</strong> из торфа и вермикулита</li>
+        <li><strong>Почвенные микроорганизмы</strong> (ризосферные бактерии)</li>
+      </ul>
+      <p>Функции:</p>
+      <ul>
+        <li>Поглощение и разложение PM2.5, NO₂, CO</li>
+        <li>Улучшение микроклимата и влажности</li>
+        <li>Звукоизоляция и эстетика</li>
+      </ul>
+      <img src="assets/images/panel-diagram.jpg" alt="Схема биофильтрационной панели">
+    </section>
+
+    <section class="section">
+      <h2>2. Сенсорный модуль с ИИ</h2>
+      <p>Состоит из:</p>
+      <ul>
+        <li>PM2.5/PM10 сенсор (например, SDS011)</li>
+        <li>Микроконтроллер (Raspberry Pi Pico)</li>
+      </ul>
+      <p>Процесс:</p>
+      <ul>
+        <li>Сбор данных уровня загрязнения</li>
+        <li>Отправка данных в облако и визуализация</li>
+        <li>AI-модуль анализирует эффективность в реальном времени</li>
+      </ul>
+      <img src="assets/images/sensor-module.jpg" alt="Сенсорный модуль с ИИ">
+    </section>
+
+    <section class="section">
+      <h2>3. Образовательная вовлечённость</h2>
+      <p>Каждая станция привязывается к школе или эко-клубу:</p>
+      <ul>
+        <li>Учащиеся следят за состоянием панелей и сенсоров</li>
+        <li>Проводят мини-эксперименты и публикуют результаты</li>
+        <li>Загружают данные в дашборд и создают отчёты</li>
+      </ul>
+      <img src="assets/images/education-platform.jpg" alt="Образовательная платформа">
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 SmartBreath. Все права защищены.</p>
+  </footer>
+</body>
+</html>

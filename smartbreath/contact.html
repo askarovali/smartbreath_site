@@ -1,0 +1,60 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBreath - Контакты</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js"></script>
+  <style>
+    .page-title { text-align: center; color: var(--color-1); margin: 2rem 0; }
+    .contact-section { max-width: 600px; margin: 2rem auto; background: var(--color-4); padding: 1.5rem; border-radius: 8px; }
+    .contact-section form { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-section input,
+    .contact-section textarea { padding: 0.75rem; border: 1px solid var(--color-2); border-radius: 4px; font-size: 1rem; }
+    .contact-section button { width: fit-content; padding: 0.5rem 1rem; background: var(--color-2); color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    .contact-info { text-align: center; margin-top: 2rem; color: var(--color-5); font-size: 0.95rem; }
+    .map-placeholder { width: 100%; height: 300px; background: var(--color-5); border-radius: 8px; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">SmartBreath</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="map.html">Карта</a></li>
+        <li><a href="how-it-works.html">Как это работает</a></li>
+        <li><a href="education.html">Образовательная платформа</a></li>
+        <li><a href="pilot.html">Пилот и планы</a></li>
+        <li><a href="partners.html">Партнёры</a></li>
+        <li><a href="news.html">Блог</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="page-title">Контакты</h1>
+    <section class="contact-section">
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Ваш Email" required>
+        <textarea name="message" rows="6" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+      <div class="contact-info">
+        <p>Электронная почта: info@smartbreath.kz</p>
+        <p>Телефон: +7 (727) 123-45-67</p>
+        <p>Адрес: г. Алматы, ул. Экологическая, 10</p>
+      </div>
+      <div class="map-placeholder">Здесь будет карта с расположением офиса</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 SmartBreath. Все права защищены.</p>
+  </footer>
+</body>
+</html>
